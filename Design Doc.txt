@@ -9,4 +9,44 @@ Card Management
 Decks – Each deck has a “face-up” discard pile.  When a deck runs out, reshuffle the discards.  If both are empty, no more draws can be done.
 
 Player Hand – Cards in the player’s hand are NOT in play.  Limit 5 cards unless race is dwarf (limit 6).  
-Carried Items – Items not in hand that have bonuses to assist the player.
+
+Carried Items – Items not in hand that have bonuses to assist the player.  Those items not helping you should be “turned sideways”, and do not give the player bonuses.
+
+Equipped - You may only use one headgear, one suit of armor, one footwear, and two “hand” items OR one “two hands” item.  UNLESS you have a card that says otherwise.  
+
+Player
+
+Players must have counters from 1 to 10 to count levels (method of winning).  This must be able to go up and down as the cards  or player actions deem.  Player level can not drop below 1.  Reaching level 10 wins the game.  If two players get there at the same time, they both win.
+
+Players start as a level 1 human with “no class”, and must have an associated gender – male or female.  Race and class cards can modify their respective quality on the player (if played), and each can have its own benefits and penalties.
+
+
+Player class-
+string name: - player name
+int level – level counter (1 to 10)
+int maxHandSize – max hand size (alterable by race or curse)
+card[] hand – cards in hand
+card[] carried – items with benefits not in hand
+int[4] equipped – array of max amount of gear equipped (alterable)
+card[] headgear – array for headgear cards
+card[] footwear - array
+card[] armor - array
+card[] hands - array
+card raceCard – pointer to raceCard equipped
+card classCard – pointer to classCard equipped
+int race – enum for race
+int class – enum for class
+int attackMod – total of treasure and level for attacking monsters
+
+	getName()
+	setName(string)
+	incrementLevel(int)
+	decrementLevel(int)
+	getRace()
+	setRace()
+	getClass()
+	setClass()
+	getAttackMod()
+	calcAttackMod()
+
+*Others to be created after construction of card class
