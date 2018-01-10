@@ -1,0 +1,12 @@
+﻿Project Design Document- Munchkin
+
+Munchkin is a multiplayer card-based competitive dungeon-crawl for 3 to 6 players.  
+
+Cards
+Two generic types of cards: Treasure and Door.  These will be how the cards are separated into decks at the beginning of the game.
+
+Card Management
+Decks – Each deck has a “face-up” discard pile.  When a deck runs out, reshuffle the discards.  If both are empty, no more draws can be done.
+
+Player Hand – Cards in the player’s hand are NOT in play.  Limit 5 cards unless race is dwarf (limit 6).  
+Carried Items – Items not in hand that have bonuses to assist the player.
