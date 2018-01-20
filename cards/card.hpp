@@ -2,8 +2,9 @@
 
 #define CARD
 #include <string>
+#include <iostream>
 
-enum CardDeck {door, treasure};
+enum CardDeck {"door", "treasure"};
 
 class Card{
 	
@@ -14,10 +15,9 @@ private:
 
 public:
 
-	Card();
-	Card(string, int);
+	Card(string);
 	int getName();
-	int getType();
+	int getDeckType();
 
 }
 

@@ -1,19 +1,13 @@
 #include "card.hpp"
 
-Card::Card(){
-	this->name = "";
-	this->cardType = -1;
-}
-
-Card::Card(string newName, int kind){
+Card::Card(string newName){
 	this->name = newName;
-	this->cardType = kind;
 }
 
 int Card::getName(){
 	return this->name;
 }
 
-int Card::getType(){
+int Card::getDeckType(){
 	return this->cardType;
 }

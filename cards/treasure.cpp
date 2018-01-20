@@ -1,11 +1,8 @@
 #include "treasure.hpp"
 
-Treasure::Treasure(){
-	this->value = 0;
-}
-
-Treasure::Treasure(int newVal){
+Treasure::Treasure(int newVal, int tType, string newName, int kind):Card(string newName, int kind){
 	this->value = newVal;
+	this->treasType = tType;
 }
 
 int Treasure::getValue(){

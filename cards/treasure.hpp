@@ -1,15 +1,17 @@
 #ifndef treasure_card
 
-#define treasure
+#define treasure_card
+
+enum TreasureType {levelUp, oneUse, equip};
 
 class Treasure:public Card{
 
 	private:
 		int value;
+		TreasureType treasType;
 
 	public:
-		Treasure();
-		Treasure(int);
+		Treasure(int, int, string, int):Card(string, int);
 		int getValue();
 	
 }

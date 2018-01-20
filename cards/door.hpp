@@ -1,17 +1,20 @@
-#ifndef DOOR_Card
+#ifndef Door_Card
 
-#define DOOR_Card
+#define Door_Card
 #include <string>
+#include "card.hpp"
 
 enum DoorDeck {"race", "class", "monster"};
+enum PlayerClass {"none", "warrior", "wizard", "thief"};
+enum PlayerRace {"human", "elf", "dwarf"};
 
-class Door{
+class Door:public Card{
 	
 private:
 	DoorDeck doorType;
 
 public:
-	Door(DoorDeck):Card(string, int);
+	Door(string):Card(string);
 	int getDoorType();
 
 }
